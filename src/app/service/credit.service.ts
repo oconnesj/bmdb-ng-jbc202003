@@ -3,14 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JsonResponse } from '../model/json-response.class';
 import { Movie } from '../model/movie.class';
-
-const url: string = "http://localhost:8080/movies/";
+const url: string = "http://localhost:8080/credits/";
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
-
+export class CreditService {
   constructor(private http: HttpClient) { }
 
   list(): Observable<JsonResponse> {

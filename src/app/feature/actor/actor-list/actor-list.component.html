@@ -1,0 +1,18 @@
+<table *ngIf="actors" class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>BirthDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let actor of actors">
+            <td>{{ actor.id }}</td>
+            <td>{{ actor.firstName + " " + actor.lastName }}</td>
+            <td>{{ actor.gender }}</td>
+            <td>{{ actor.birthdate }}</td>
+        </tr>
+    </tbody>
+</table>
