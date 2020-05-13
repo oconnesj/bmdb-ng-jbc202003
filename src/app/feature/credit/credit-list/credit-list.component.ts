@@ -16,7 +16,7 @@ export class CreditListComponent implements OnInit {
     this.creditSvc.list().subscribe(
       jr => {
         this.credits = jr.data as Credit[];
-        console.log("List of credits", this.credits);
+        console.log("List of credits", this.credits, jr.errors);
   }
     );
 }
