@@ -18,6 +18,7 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit/credit-edit.component';
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail/credit-detail.component';
 import { MenuComponent } from './core/menu/menu.component';
+import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MenuComponent } from './core/menu/menu.component';
     CreditEditComponent,
     CreditDetailComponent,
     MenuComponent,
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,
