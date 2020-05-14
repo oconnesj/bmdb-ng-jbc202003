@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Actor } from 'src/app/model/actor.class';
+import { CreditService } from 'src/app/service/credit.service';
 import { ActorService } from 'src/app/service/actor.service';
+
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,10 +14,12 @@ export class ActorDetailComponent implements OnInit {
   actor: Actor = new Actor();
   title: string = 'Actor-Detail';
   actorId: number = 0;
+  creditId: number = 0;
 
   constructor(private actorSvc: ActorService,
     private router: Router,
     private route: ActivatedRoute) { }
+
 
   ngOnInit(): void {
     // get the id from the route
@@ -27,6 +31,10 @@ export class ActorDetailComponent implements OnInit {
       console.log("Actor Found!", this.actor);
     });
   }
+
+
+
+
   delete() {
     this.actorSvc.delete(this.actorId).subscribe(jr => {
       if (jr.errors==null){
