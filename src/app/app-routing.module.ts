@@ -13,6 +13,14 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail/credit-detail.component';
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit/credit-edit.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
+import { GenreListComponent } from './feature/genre/genre-list/genre-list.component';
+import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
+import { GenreDetailComponent } from './feature/genre/genre-detail/genre-detail.component';
+import { GenreEditComponent } from './feature/genre/genre-edit/genre-edit.component';
+import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/moviegenre-list.component';
+import { MoviegenreCreateComponent } from './feature/moviegenre/moviegenre-create/moviegenre-create.component';
+import { MoviegenreDetailComponent } from './feature/moviegenre/moviegenre-detail/moviegenre-detail.component';
+import { MoviegenreEditComponent } from './feature/moviegenre/moviegenre-edit/moviegenre-edit.component';
 
 
 const routes: Routes = [
@@ -30,6 +38,14 @@ const routes: Routes = [
   {path: 'credit/create', component: CreditCreateComponent}, 
   {path: 'credit/detail/:id', component: CreditDetailComponent}, 
   {path: 'credit/edit/:id', component: CreditEditComponent}, 
+  {path: 'genre/list', component: GenreListComponent}, 
+  {path: 'genre/create', component: GenreCreateComponent}, 
+  {path: 'genre/detail/:id', component: GenreDetailComponent}, 
+  {path: 'genre/edit/:id', component: GenreEditComponent}, 
+  {path: 'moviegenre/list', component: MoviegenreListComponent}, 
+  {path: 'moviegenre/create', component: MoviegenreCreateComponent}, 
+  {path: 'moviegenre/detail/:id', component: MoviegenreDetailComponent}, 
+  {path: 'moviegenre/edit/:id', component: MoviegenreEditComponent}, 
   {path: 'user/login', component: UserLoginComponent}, 
 
   {path: '**', component: MovieListComponent} 

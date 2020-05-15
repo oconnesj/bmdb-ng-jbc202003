@@ -1,0 +1,34 @@
+<section class ="heading">
+
+    <span class='page-title font-weight-bold font-italic'>[{{title}}]</span>
+   <a routerLink='/genre/create'>
+    <img width='20' height='20' 
+    src='assets/add-icon.png' title='Add New'>
+ </a>
+    
+
+</section>
+
+<table *ngIf="genres" class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let genre of genres">
+            <td>{{ genre.id }}</td>
+            <td>{{ genre.name }}</td>
+     
+            <td>
+         
+                <a routerLink='/genre/edit/{{genre.id}}'>
+                    <img width='20' height='20' src='assets/pencil-icon.png' title='Edit Genre'>
+                </a>
+            </td>
+
+        </tr> 
+    </tbody>
+</table>

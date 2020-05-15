@@ -4,6 +4,9 @@ import { MovieService } from 'src/app/service/movie.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Credit } from 'src/app/model/credit.class';
 import { CreditService } from 'src/app/service/credit.service';
+import { Moviegenre } from 'src/app/model/moviegenre.class';
+import { MovieGenreService } from 'src/app/service/moviegenre.service';
+
 
 @Component({
   selector: 'app-movie-detail',
@@ -15,9 +18,12 @@ export class MovieDetailComponent implements OnInit {
   title: string = 'Movie-Detail';
   movieId: number = 0;
   credits: Credit[] = [];
+  moviegenres:Moviegenre[] = []; 
 
   constructor(private movieSvc: MovieService,
     private creditSvc: CreditService,
+    private moviegenreSvc: MovieGenreService,
+    
     private router: Router,
     private route: ActivatedRoute) { }
 
@@ -35,6 +41,10 @@ export class MovieDetailComponent implements OnInit {
       this.credits = jr.data as Credit [];
 
     });
+    this.moviegenreSvc.listByMovieID(this.movieId).subscribe(jr => {
+      this.moviegenres = jr.data as Moviegenre []
+    })
+
   }
   delete() {
     this.movieSvc.delete(this.movieId).subscribe(jr => {

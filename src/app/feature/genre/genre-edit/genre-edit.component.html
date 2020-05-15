@@ -1,0 +1,22 @@
+
+<span class='component-title'>[{{title}}]</span>
+<p *ngIf='!genre'>Loading...</p>
+<div *ngIf='genre'>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input [(ngModel)]="genre.name" class="rounded" type="text">
+                </td>
+            </tr>
+         
+           
+        </table>
+    </main>
+    <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> 
+    <span> | <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+​
+</div>

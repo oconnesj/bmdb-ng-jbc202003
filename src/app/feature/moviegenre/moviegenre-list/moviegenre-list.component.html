@@ -1,0 +1,36 @@
+<section class ="heading">
+
+    <span class='page-title font-weight-bold font-italic'>[{{title}}]</span>
+   <a routerLink='/moviegenre/create'>
+    <img width='20' height='20' 
+    src='assets/add-icon.png' title='Add New'>
+ </a>
+    
+
+</section>
+
+<table *ngIf="moviegenres" class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Movie ID</th>
+            <th>Genre ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let moviegenre of moviegenres">
+            <td>{{ moviegenre.id }}</td>
+            <td>{{ moviegenre.movie.id}}</td>
+            <td>{{ moviegenre.genre.id }}</td>
+            <td>
+                <a routerLink='/moviegenre/detail/{{moviegenre.id}}'>
+                    <img width='20' height='20' src='assets/details.png' title='Moviegenre Details'>
+                </a> | 
+                <a routerLink='/moviegenre/edit/{{moviegenre.id}}'>
+                    <img width='20' height='20' src='assets/pencil-icon.png' title='Edit Moviegenre'>
+                </a>
+            </td>
+
+        </tr> 
+    </tbody>
+</table>

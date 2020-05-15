@@ -30,6 +30,22 @@
 
 
         </table>
+
+        <table *ngIf="moviegenres" class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th>Genre</th>
+ 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let moviegenre of moviegenres">
+                  
+                    <td>{{ moviegenre.genre.name }}</td>
+        
+                </tr> 
+            </tbody>
+        </table>
         <h1>Credits</h1>
         <table class="table table-sm">
             <tr>

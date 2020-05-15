@@ -35,4 +35,6 @@ export class CreditService {
   getAllActorsForMovie(id: number): Observable<JsonResponse> {
     return this.http.get(url +"/by-movie/"+ id) as Observable<JsonResponse>;
   }
+
+
 }

@@ -19,6 +19,15 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit/cr
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail/credit-detail.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
+import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
+import { GenreDetailComponent } from './feature/genre/genre-detail/genre-detail.component';
+import { GenreEditComponent } from './feature/genre/genre-edit/genre-edit.component';
+import { GenreListComponent } from './feature/genre/genre-list/genre-list.component';
+
+import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/moviegenre-list.component';
+import { MoviegenreEditComponent } from './feature/moviegenre/moviegenre-edit/moviegenre-edit.component';
+import { MoviegenreCreateComponent } from './feature/moviegenre/moviegenre-create/moviegenre-create.component';
+import { MoviegenreDetailComponent } from './feature/moviegenre/moviegenre-detail/moviegenre-detail.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +46,15 @@ import { UserLoginComponent } from './feature/user/user-login/user-login.compone
     CreditDetailComponent,
     MenuComponent,
     UserLoginComponent,
+    GenreCreateComponent,
+    GenreDetailComponent,
+    GenreEditComponent,
+    GenreListComponent,
+
+    MoviegenreListComponent,
+    MoviegenreEditComponent,
+    MoviegenreCreateComponent,
+    MoviegenreDetailComponent,
   ],
   imports: [
     BrowserModule,
